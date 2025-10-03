@@ -23,7 +23,7 @@ transfer = int(input('Enter the data transfer size in megabytes (MB): '))
 print('')
 print('FIREWALL LOG:')
 print(f'Port: {port}, Transfer Size: {transfer} MB')
-if port == 22:
+if port == 22 or 3389:
     print('Risk Assessment: HIGH RISK: Potential unauthorized remote access detected!')
 elif port == 80 and transfer > 100:
     print('Risk Assessment: MEDIUM RISK: Large unencrypted data transfer detected.')
