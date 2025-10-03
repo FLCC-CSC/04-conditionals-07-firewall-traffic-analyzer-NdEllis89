@@ -22,7 +22,7 @@ port = int(input('Enter the port number (e.g., 80, 22, 443, 3389): '))
 transfer = int(input('Enter the data transfer size in megabytes (MB): '))
 print('')
 print('FIREWALL LOG:')
-
+print(f'Port: {port}, Transfer Size: {transfer} MB')
 if port == 22:
     print('Risk Assessment: HIGH RISK: Potential unauthorized remote access detected!')
 elif port == 80 and transfer > 100:
@@ -32,7 +32,7 @@ elif port == 443:
 else:
     print('Risk Assessment: UNKNOWN: Unrecognized traffic pattern.')
 #Else output "UNKNOWN: Unrecognized traffic pattern." 
-print(f'Port: {port}, Transfer Size: {transfer} MB')
+
 print('------------------------')
 ########### END YER CODE ABOVE THIS LINE ###########
 
