@@ -1,8 +1,8 @@
 # FILE NAME - firewall_traffic_analyzer.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Noah Ellis
+# DATE: 10/2/2025
+# BRIEF DESCRIPTION: use port number and file size to determine risk
 
 
 
@@ -15,15 +15,25 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+print('=== Network Traffic Security Analyzer ===')
+print('')
 
+port = int(input('Enter the port number (e.g., 80, 22, 443, 3389): '))
+transfer = int(input('Enter the data transfer size in megabytes (MB): '))
+print('')
+print('FIREWALL LOG:')
 
-
-
-
-
-
-
-
+if port == 22:
+    print('Risk Assessment: HIGH RISK: Potential unauthorized remote access detected!')
+elif port == 80 and transfer > 100:
+    print('Risk Assessment: MEDIUM RISK: Large unencrypted data transfer detected.')
+elif port == 443:
+    print('Risk Assessment: LOW RISK: Secure encrypted transfer detected.')
+else:
+    print('Risk Assessment: UNKNOWN: Unrecognized traffic pattern.')
+#Else output "UNKNOWN: Unrecognized traffic pattern." 
+print(f'Port: {port}, Transfer Size: {transfer} MB')
+print('------------------------')
 ########### END YER CODE ABOVE THIS LINE ###########
 
     
@@ -89,8 +99,7 @@ Risk Assessment: UNKNOWN: Unrecognized traffic pattern.
 '''
 
 1. Did you get tripped up using the `or` or `and` operators? If so, how?
-
-
+Yes. I was using or rather than and which lead to my 443 port being a risk
 
 
 
